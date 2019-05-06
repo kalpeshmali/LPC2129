@@ -358,9 +358,9 @@ Image Symbol Table
     command                                  0x000002b4   ARM Code      72  lcd_display.o(i.command)
     data                                     0x00000300   ARM Code      68  lcd_display.o(i.data)
     delay                                    0x00000348   ARM Code      44  lcd_display.o(i.delay)
-    main                                     0x00000374   ARM Code     116  lcd_display.o(i.main)
-    Region$$Table$$Base                      0x000003f0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000400   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00000374   ARM Code     196  lcd_display.o(i.main)
+    Region$$Table$$Base                      0x00000464   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000474   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x40000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x40000060   Data           0  libspace.o(.bss)
 
@@ -372,9 +372,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000110
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000400, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000474, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00000400, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00000474, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -441,8 +441,8 @@ Memory Map of the image
     0x000002b4   0x0000004c   Code   RO           11    i.command           lcd_display.o
     0x00000300   0x00000048   Code   RO           12    i.data              lcd_display.o
     0x00000348   0x0000002c   Code   RO           13    i.delay             lcd_display.o
-    0x00000374   0x0000007c   Code   RO           14    i.main              lcd_display.o
-    0x000003f0   0x00000010   Data   RO          206    Region$$Table       anon$$obj.o
+    0x00000374   0x000000f0   Code   RO           14    i.main              lcd_display.o
+    0x00000464   0x00000010   Data   RO          206    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x40000000, Size: 0x000004e8, Max: 0x00004000, ABSOLUTE)
@@ -461,11 +461,11 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       316         16          0          0          0       3204   lcd_display.o
+       432         52          0          0          0       3328   lcd_display.o
        304         60          0          0       1160        508   startup.o
 
     ----------------------------------------------------------------------
-       620         76         16          0       1160       3712   Object Totals
+       736        112         16          0       1160       3836   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -513,15 +513,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1008         96         16          0       1256       4060   Grand Totals
-      1008         96         16          0       1256       4060   ELF Image Totals
-      1008         96         16          0          0          0   ROM Totals
+      1124        132         16          0       1256       4184   Grand Totals
+      1124        132         16          0       1256       4184   ELF Image Totals
+      1124        132         16          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1024 (   1.00kB)
+    Total RO  Size (Code + RO Data)                 1140 (   1.11kB)
     Total RW  Size (RW Data + ZI Data)              1256 (   1.23kB)
-    Total ROM Size (Code + RO Data + RW Data)       1024 (   1.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       1140 (   1.11kB)
 
 ==============================================================================
 

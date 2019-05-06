@@ -33,21 +33,24 @@ void data(char c)
 }
 int main()
 {
+	char *str1="KarMic Embedded";
+	char *str2="Pvt ltd,Banglore.";
+	char i;
 	IODIR0=port;
 	command(0x38);
 	command(0x0e);
 	command(0x01);
 	command(0x0f);
 	command(0x80);
-	data('A');
-	data('A');
-	data('B');
-	data('A');
-	data('A');
-	data('A');
-	data('A');
-	
-	
-	while(1);
+	for(i=0;i<str1[i]!='\0';i++)
+	{
+		data(str1[i]);
+	}
+	command(0xc0);
+	for(i=0;i<str2[i]!='\0';i++)
+	{
+		data(str2[i]);
+	}
+	//while(1);
 	
 }
