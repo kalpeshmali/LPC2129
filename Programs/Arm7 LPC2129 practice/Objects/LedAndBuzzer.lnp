@@ -1,0 +1,7 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\ledwithbuzzer.o"
+--strict --scatter ".\Objects\LedAndBuzzer.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LedAndBuzzer.map" -o .\Objects\LedAndBuzzer.axf

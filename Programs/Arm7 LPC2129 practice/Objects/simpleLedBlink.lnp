@@ -1,0 +1,7 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\1_simple_led_blink.o"
+--strict --scatter ".\Objects\simpleLedBlink.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\simpleLedBlink.map" -o .\Objects\simpleLedBlink.axf
