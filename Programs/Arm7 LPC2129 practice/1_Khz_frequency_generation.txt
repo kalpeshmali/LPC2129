@@ -1,0 +1,10 @@
+void delay(void)
+{
+                uint32_t i;
+                PinWrite(1,29,HIGH);
+                i=8928;
+                while(i--);
+                PinWrite(1,29,LOW);
+                i=8928;
+                while(i--);
+}
